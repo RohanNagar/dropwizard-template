@@ -1,0 +1,13 @@
+language: java
+jdk:
+  - openjdk11
+
+script:
+  - mvn clean test jacoco:report coveralls:report
+  - bash <(curl -s https://codecov.io/bash)
+
+# Restrict branch builds to master
+branches:
+  only:
+    - master
+    - /^[v](\d+\.)?(\d+\.)?(\d+)$/
