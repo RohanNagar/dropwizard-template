@@ -1,6 +1,5 @@
 package com.sanction.template.authentication;
 
-import io.dropwizard.auth.AuthenticationException;
 import io.dropwizard.auth.Authenticator;
 import io.dropwizard.auth.basic.BasicCredentials;
 
@@ -18,7 +17,7 @@ public class TemplateAuthenticator implements Authenticator<BasicCredentials, Ke
   }
 
   @Override
-  public Optional<Key> authenticate(BasicCredentials credentials) throws AuthenticationException {
+  public Optional<Key> authenticate(BasicCredentials credentials) {
     // Construct a key from incoming credentials
     Key key = new Key(credentials.getUsername(), credentials.getPassword());
 

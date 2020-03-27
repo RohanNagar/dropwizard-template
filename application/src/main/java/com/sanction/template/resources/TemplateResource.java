@@ -16,17 +16,17 @@ import org.slf4j.LoggerFactory;
 
 @Path("/")
 @Produces(MediaType.APPLICATION_JSON)
-public class TaskResource {
-  private static final Logger LOG = LoggerFactory.getLogger(TaskResource.class);
+public class TemplateResource {
+  private static final Logger LOG = LoggerFactory.getLogger(TemplateResource.class);
 
   @Inject
-  public TaskResource() {
+  public TemplateResource() {
 
   }
 
   @GET
-  @Path("/task")
-  public Response getTask(@Auth Key key) {
-    return Response.ok("Sample Task").build();
+  @Path("/test")
+  public Response getTest(@Auth Key key) {
+    return Response.ok("Sample Method").build();
   }
 }

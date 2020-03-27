@@ -2,7 +2,7 @@ package com.sanction.template;
 
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.health.HealthCheckRegistry;
-import com.sanction.template.resources.TaskResource;
+import com.sanction.template.resources.TemplateResource;
 
 import io.dropwizard.auth.AuthDynamicFeature;
 import io.dropwizard.jersey.setup.JerseyEnvironment;
@@ -53,6 +53,6 @@ public class TemplateApplicationTest {
     List<Object> values = captor.getAllValues();
 
     assertEquals(1, values.stream().filter(v -> v instanceof AuthDynamicFeature).count());
-    assertEquals(1, values.stream().filter(v -> v instanceof TaskResource).count());
+    assertEquals(1, values.stream().filter(v -> v instanceof TemplateResource).count());
   }
 }

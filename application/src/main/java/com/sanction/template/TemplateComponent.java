@@ -1,7 +1,7 @@
 package com.sanction.template;
 
 import com.sanction.template.authentication.TemplateAuthenticator;
-import com.sanction.template.resources.TaskResource;
+import com.sanction.template.resources.TemplateResource;
 
 import dagger.Component;
 
@@ -11,7 +11,7 @@ import javax.inject.Singleton;
 @Component(modules = {TemplateModule.class})
 public interface TemplateComponent {
 
-  TaskResource getTaskResource();
+  TemplateResource getTaskResource();
 
   TemplateAuthenticator getHurricaneAuthenticator();
 }
