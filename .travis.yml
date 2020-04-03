@@ -55,7 +55,6 @@ jobs:
         - npm --prefix scripts/ install
       script:
         - mvn clean package jacoco:report
-        - sh -c scripts/tools/integration-tests.sh
       after_success:
         - bash <(curl -s https://codecov.io/bash)
 
