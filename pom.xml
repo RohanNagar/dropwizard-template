@@ -57,7 +57,6 @@
     <surefire.version>2.22.2</surefire.version>
 
     <!-- Dependency versions -->
-    <aws.version>2.11.9</aws.version>
     <commons-validator.version>1.6</commons-validator.version>
     <dagger.version>2.27</dagger.version>
     <dropwizard.version>2.0.5</dropwizard.version>
@@ -386,13 +385,6 @@
         <groupId>org.mockito</groupId>
         <artifactId>mockito-core</artifactId>
         <version>${mockito.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>software.amazon.awssdk</groupId>
-        <artifactId>bom</artifactId>
-        <version>${aws.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
