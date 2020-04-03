@@ -1,15 +1,3 @@
-# Information to access DynamoDB
-database:
-  endpoint: https://dynamodb.us-east-1.amazonaws.com
-  region: us-east-1
-  tableName: pilot-users-test
-
-# Information to access SES
-email:
-  endpoint: https://email.us-east-1.amazonaws.com
-  region: us-east-1
-  fromAddress: noreply@sanctionco.com
-
 # Approved Application Authentication Credentials
 approvedKeys:
   - application: application
