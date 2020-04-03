@@ -1,0 +1,35 @@
+# Information to access DynamoDB
+database:
+  endpoint: http://dynamo:4567
+  region: us-east-1
+  tableName: pilot-users-test
+
+# Information to access SES
+email:
+  endpoint: http://ses:9001
+  region: us-east-1
+  fromAddress: noreply@sanctionco.com
+
+# Approved Application Authentication Credentials
+approvedKeys:
+  - application: application
+    secret: secret
+
+# OpenAPI Configuration
+openApi:
+  title: Thunder OpenAPI Test
+  description: Thunder OpenAPI description
+
+# Use MD5 for password hashing
+passwordHash:
+  algorithm: md5
+  serverSideHash: true
+
+# Server configuration
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+  adminConnectors:
+    - type: http
+      port: 8081

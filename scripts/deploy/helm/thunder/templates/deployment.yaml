@@ -1,0 +1,42 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: thunder
+spec:
+  replicas: {{ .Values.replicaCount }}
+  template:
+    metadata:
+      labels:
+        app: thunder
+    spec:
+      containers:
+        - name: thunder
+          image: rohannagar/thunder:{{ .Values.thunderImageTag }}
+          imagePullPolicy: Always
+          env:
+            - name: AWS_ACCESS_KEY_ID
+              value: {{ .Values.awsAccessKeyId }}
+            - name: AWS_SECRET_ACCESS_KEY
+              value: {{ .Values.awsSecretAccessKey }}
+          ports:
+            - containerPort: {{ .Values.serviceBackendPort }}
+            - containerPort: {{ .Values.serviceAdminPort }}
+          volumeMounts:
+            - name: config-volume
+              mountPath: /home/config
+          livenessProbe:
+            httpGet:
+              path: /healthcheck
+              port: {{ .Values.serviceAdminPort }}
+            initialDelaySeconds: 10
+            timeoutSeconds: 1
+          readinessProbe:
+            httpGet:
+              path: /healthcheck
+              port: {{ .Values.serviceAdminPort }}
+            initialDelaySeconds: 10
+            timeoutSeconds: 1
+      volumes:
+        - name: config-volume
+          configMap:
+            name: thunder-config

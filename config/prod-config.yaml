@@ -1,0 +1,37 @@
+# Information to access DynamoDB
+database:
+  endpoint: https://dynamodb.us-east-1.amazonaws.com
+  region: us-east-1
+  tableName: pilot-users-test
+
+# Information to access SES
+email:
+  endpoint: https://email.us-east-1.amazonaws.com
+  region: us-east-1
+  fromAddress: noreply@sanctionco.com
+
+# Approved Application Authentication Credentials
+approvedKeys:
+  - application: application
+    secret: secret
+
+# Server configuration
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+  adminConnectors:
+    - type: http
+      port: 8081
+  requestLog:
+    appenders:
+      - type: file
+        currentLogFilename: /var/log/thunder/thunder-requests.log
+        archivedLogFilenamePattern: /var/log/thunder/thunder-requests-%d.log
+
+logging:
+  level: INFO
+  appenders:
+    - type: file
+      currentLogFilename: /var/log/thunder/thunder.log
+      archivedLogFilenamePattern: /var/log/thunder/thunder-%d.log

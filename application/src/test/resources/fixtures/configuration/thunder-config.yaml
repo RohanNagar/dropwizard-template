@@ -1,0 +1,23 @@
+database:
+  endpoint: test.dynamo.com
+  region: test-region-1
+  tableName: test-table
+
+email:
+  endpoint: test.email.com
+  region: test-region-2
+  fromAddress: test@sanctionco.com
+  messageOptions:
+    subject: Test Subject
+    bodyHtmlFilePath: test-body.html
+    bodyTextFilePath: test-body.txt
+    urlPlaceholderString: TEST-PLACEHOLDER
+    successHtmlFilePath: test-success-page.html
+
+approvedKeys:
+  - application: test-app
+    secret: test-secret
+
+properties:
+  - name: testProperty
+    type: list

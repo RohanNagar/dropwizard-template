@@ -7,9 +7,11 @@
 # Eclipse Files
 .classpath
 .project
+.settings/
 
 # Build outputs
 target/
+_build/
 
 # Vagrant outputs
 .vagrant
@@ -21,5 +23,8 @@ target/
 dependency-reduced-pom.xml
 
 # Log files
-var/log/
+*.log
 
+# Node.js dependency directories
+node_modules/
+out/
