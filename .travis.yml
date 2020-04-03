@@ -20,30 +20,30 @@ jobs:
 
     ## STAGE 1: Lint ##
 
-    - stage: lint
-      name: ESLint
-      language: node_js
-      node_js:
-        - node
-      install: npm --prefix scripts/ install
-      script: npm --prefix scripts/ run lint
+#    - stage: lint
+#      name: ESLint
+#      language: node_js
+#      node_js:
+#        - node
+#      install: npm --prefix scripts/ install
+#      script: npm --prefix scripts/ run lint
 
-    - stage: lint
-      name: Shellcheck
-      env: CACHE_NAME=SHELLCHECK
-      install: skip
-      script: shellcheck scripts/**/*.sh
+#    - stage: lint
+#      name: Shellcheck
+#      env: CACHE_NAME=SHELLCHECK
+#      install: skip
+#      script: shellcheck scripts/**/*.sh
 
-    - stage: lint
-      name: Helm Lint
-      env: CACHE_NAME=HELMLINT
-      before_install:
-        - wget https://kubernetes-helm.storage.googleapis.com/helm-v2.13.1-linux-amd64.tar.gz
-        - tar -xzvf helm-v2.13.1-linux-amd64.tar.gz
-        - sudo mv linux-amd64/helm /usr/local/bin/helm
-        - helm init -c
-      install: skip
-      script: helm lint scripts/deploy/helm/thunder
+#    - stage: lint
+#      name: Helm Lint
+#      env: CACHE_NAME=HELMLINT
+#      before_install:
+#        - wget https://kubernetes-helm.storage.googleapis.com/helm-v2.13.1-linux-amd64.tar.gz
+#        - tar -xzvf helm-v2.13.1-linux-amd64.tar.gz
+#        - sudo mv linux-amd64/helm /usr/local/bin/helm
+#        - helm init -c
+#      install: skip
+#      script: helm lint scripts/deploy/helm/thunder
 
     ## STAGE 2: Build and Test JAR ##
 
@@ -85,26 +85,26 @@ jobs:
 
     ## STAGE 4: Push Docker Image ##
 
-    - stage: release
-      name: Release Docker Image
-      services:
-        - docker
-      env: CACHE_NAME=DOCKERRELEASE
-      install:
-        - mvn install -Dmaven.test.skip=true -Dmaven.javadoc.skip=true -B -V
-      before_script:
-        - echo "$DOCKER_PASSWORD" | docker login -u rohannagar --password-stdin
-      script:
-        - mvn clean package -Dmaven.test.skip=true
-        - docker build -t rohannagar/thunder:edge .
-        - docker push rohannagar/thunder:edge
-
-      # Publish a versioned Docker image on tagged commit
-      deploy:
-        provider: script
-        script: bash scripts/ci/docker_push.sh
-        on:
-          tags: true
+#    - stage: release
+#      name: Release Docker Image
+#      services:
+#        - docker
+#      env: CACHE_NAME=DOCKERRELEASE
+#      install:
+#        - mvn install -Dmaven.test.skip=true -Dmaven.javadoc.skip=true -B -V
+#      before_script:
+#        - echo "$DOCKER_PASSWORD" | docker login -u rohannagar --password-stdin
+#      script:
+#        - mvn clean package -Dmaven.test.skip=true
+#        - docker build -t rohannagar/thunder:edge .
+#        - docker push rohannagar/thunder:edge
+#
+#      # Publish a versioned Docker image on tagged commit
+#      deploy:
+#        provider: script
+#        script: bash scripts/ci/docker_push.sh
+#        on:
+#          tags: true
 
 # Restrict builds to master and tags
 branches:
