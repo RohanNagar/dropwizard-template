@@ -5,13 +5,13 @@
   <parent>
     <artifactId>parent</artifactId>
     <groupId>com.sanctionco.template</groupId>
-    <version>2.1.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
   </parent>
 
   <name>client</name>
   <artifactId>client</artifactId>
   <packaging>jar</packaging>
-  <version>2.1.1-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
 
   <build>
     <plugins>

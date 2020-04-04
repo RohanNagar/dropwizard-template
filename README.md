@@ -15,3 +15,7 @@ dropwizard-template
     <img src="https://img.shields.io/lgtm/alerts/g/RohanNagar/dropwizard-template.svg" alt="LGTM Alerts">
   </a>
 </p>
+
+## Using the Template
+
+To be filled.
