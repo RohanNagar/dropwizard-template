@@ -62,7 +62,7 @@
     <dropwizard.version>2.0.13</dropwizard.version>
     <guava.version>29.0-jre</guava.version>
     <jackson.api.version>2.11.2</jackson.api.version>
-    <junit.platform.version>1.6.2</junit.platform.version>
+    <junit.platform.version>1.7.0</junit.platform.version>
     <junit.jupiter.version>5.7.0</junit.jupiter.version>
     <mockito.version>3.5.10</mockito.version>
     <retrofit.version>2.9.0</retrofit.version>
