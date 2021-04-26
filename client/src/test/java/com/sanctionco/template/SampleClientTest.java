@@ -35,7 +35,7 @@ class SampleClientTest {
   private static final SampleModel user = new SampleModel("Test");
 
   /**
-   * Resource to be used as a test double. Requests from the ThunderClient interface
+   * Resource to be used as a test double. Requests from the SampleClient interface
    * will be directed here for the unit tests. Use this to verify that all parameters are
    * being set correctly.
    */
@@ -45,6 +45,8 @@ class SampleClientTest {
 
     /**
      * Sample getTest method.
+     *
+     * @return an OK response
      */
     @GET
     @Path("sample")
