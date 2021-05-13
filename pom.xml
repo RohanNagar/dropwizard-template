@@ -64,7 +64,7 @@
     <jackson.api.version>2.12.3</jackson.api.version>
     <junit.platform.version>1.7.1</junit.platform.version>
     <junit.jupiter.version>5.7.1</junit.jupiter.version>
-    <mockito.version>3.9.0</mockito.version>
+    <mockito.version>3.10.0</mockito.version>
     <retrofit.version>2.9.0</retrofit.version>
     <swagger.version>2.1.9</swagger.version>
   </properties>
