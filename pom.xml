@@ -66,7 +66,7 @@
     <junit.jupiter.version>5.8.2</junit.jupiter.version>
     <mockito.version>4.4.0</mockito.version>
     <retrofit.version>2.9.0</retrofit.version>
-    <swagger.version>2.1.13</swagger.version>
+    <swagger.version>2.2.0</swagger.version>
   </properties>
 
   <!-- Google Maven Repo is required for Dagger 2.38 and up -->
