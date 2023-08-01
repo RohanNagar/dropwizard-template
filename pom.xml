@@ -60,7 +60,7 @@
     <commons-validator.version>1.7</commons-validator.version>
     <dagger.version>2.47</dagger.version>
     <dropwizard.version>4.0.1</dropwizard.version>
-    <guava.version>32.1.1-jre</guava.version>
+    <guava.version>32.1.2-jre</guava.version>
     <jackson.api.version>2.15.2</jackson.api.version>
     <junit.platform.version>1.10.0</junit.platform.version>
     <junit.jupiter.version>5.10.0</junit.jupiter.version>
