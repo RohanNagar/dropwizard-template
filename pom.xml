@@ -57,7 +57,7 @@
     <surefire.version>3.2.5</surefire.version>
 
     <!-- Dependency versions -->
-    <commons-validator.version>1.8.0</commons-validator.version>
+    <commons-validator.version>1.9.0</commons-validator.version>
     <dagger.version>2.51.1</dagger.version>
     <dropwizard.version>4.0.7</dropwizard.version>
     <guava.version>33.2.0-jre</guava.version>
