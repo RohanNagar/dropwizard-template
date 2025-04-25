@@ -61,7 +61,7 @@
     <dagger.version>2.56.2</dagger.version>
     <dropwizard.version>4.0.13</dropwizard.version>
     <guava.version>33.4.8-jre</guava.version>
-    <jackson.api.version>2.18.3</jackson.api.version>
+    <jackson.api.version>2.19.0</jackson.api.version>
     <junit.platform.version>1.12.2</junit.platform.version>
     <junit.jupiter.version>5.12.2</junit.jupiter.version>
     <mockito.version>5.17.0</mockito.version>
