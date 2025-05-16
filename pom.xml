@@ -65,7 +65,7 @@
     <junit.platform.version>1.12.2</junit.platform.version>
     <junit.jupiter.version>5.12.2</junit.jupiter.version>
     <mockito.version>5.17.0</mockito.version>
-    <retrofit.version>2.11.0</retrofit.version>
+    <retrofit.version>3.0.0</retrofit.version>
     <swagger.version>2.2.32</swagger.version>
   </properties>
 
