@@ -58,7 +58,7 @@
 
     <!-- Dependency versions -->
     <commons-validator.version>1.10.0</commons-validator.version>
-    <dagger.version>2.57.1</dagger.version>
+    <dagger.version>2.57.2</dagger.version>
     <dropwizard.version>5.0.0</dropwizard.version>
     <guava.version>33.5.0-jre</guava.version>
     <jackson.api.version>2.20.0</jackson.api.version>
