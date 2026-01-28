@@ -59,7 +59,7 @@
     <!-- Dependency versions -->
     <commons-validator.version>1.10.1</commons-validator.version>
     <dagger.version>2.59</dagger.version>
-    <dropwizard.version>5.0.0</dropwizard.version>
+    <dropwizard.version>5.0.1</dropwizard.version>
     <guava.version>33.5.0-jre</guava.version>
     <jackson.api.version>2.21.0</jackson.api.version>
     <junit.platform.version>1.13.4</junit.platform.version>
