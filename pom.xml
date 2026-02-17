@@ -63,7 +63,7 @@
     <guava.version>33.5.0-jre</guava.version>
     <jackson.api.version>2.21.0</jackson.api.version>
     <junit.platform.version>1.14.3</junit.platform.version>
-    <junit.jupiter.version>6.0.2</junit.jupiter.version>
+    <junit.jupiter.version>6.0.3</junit.jupiter.version>
     <mockito.version>5.21.0</mockito.version>
     <retrofit.version>3.0.0</retrofit.version>
     <swagger.version>2.2.43</swagger.version>
