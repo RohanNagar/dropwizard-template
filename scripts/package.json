@@ -10,7 +10,7 @@
     "argparse": "^2.0.1"
   },
   "devDependencies": {
-    "eslint": "^10.2.0",
+    "eslint": "^10.2.1",
     "eslint-config-google": "^0.14.0"
   },
   "scripts": {
